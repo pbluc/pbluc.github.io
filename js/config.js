@@ -11,18 +11,18 @@ const CONFIG = {
     animatedModel: null,              // e.g. "assets/avatar-talking.glb"
     animationName: null               // optional clip name inside the animated model
   },
-  introAudio: null,                   // e.g. "assets/intro.mp3"
+  introAudio: "assets/intro.m4a",                   // e.g. "assets/intro.mp3"
   // Caption timings in seconds. Adjust to match your recording.
   introCues: [
-    { t: 0.0, text: "Hi! I'm Patricia." },
-    { t: 1.6, text: "Nice to meet you." },
-    { t: 3.0, text: "I'm a software engineer based in Seattle who's passionate about helping build things that immerse, connect and help people." }
+    { t: 0.7, text: "Hi! I'm Patricia." },
+    { t: 2.8, text: "Nice to meet you." },
+    { t: 4.4, text: "I'm a software engineer who's passionate about building things that immerse, connect and help people." }
   ],
   projectModels: {                    // e.g. "assets/segdimmer.glb"
-    cone: null, segdimmer: null, stickyar: null, artgal: null
+    cone: "assets/cone.glb", segdimmer: "assets/segdimmer.glb", stickyar: "assets/stickyar.glb", artgal: "assets/artgal.glb"
   },
   futureAudio: {                      // e.g. "assets/interior.mp3"
-    "interior decorating": null, "making content": null, "living in LA": null
+    "interior decorating": "assets/interior-decorating.m4a", "making content": "assets/making-content.m4a", "living in LA": "assets/los-angeles.m4a"
   }
 };
 
@@ -37,7 +37,7 @@ const PROJECTS = [
   { id: "stickyar", when: "Spring 2022", name: "StickyAR",
     blurb: "A cross-platform mobile sticky-note app for mixed reality. Pin notes to walls, save workspaces across physical spaces, and find your way with a minimap.",
     tags: ["Unity", "C#", "AR Foundation", "ARCore", "ARKit"],
-    link: { href: "https://youtu.be/W_m--NwvnZI", label: "StickyAR walkthrough on YouTube", icon: "play" } },
+    link: { href: "https://github.com/pbluc/StickyAR", label: "StickyAR on GitHub", icon: "github" } },
   { id: "artgal", when: "Summer 2021", name: "ARt Gal",
     blurb: "A social, art-sharing AR app for Android. Attach augmented effects to physical artwork, then discover nearby pieces and what others left on a map.",
     tags: ["Java", "Android", "ARCore", "Augmented Images", "Google Maps SDK", "Firebase"],

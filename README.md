@@ -93,3 +93,7 @@ GitHub rejects files over 100 MB, and the web uploader allows up to 25 MB per fi
 - **Font:** EB Garamond from Google Fonts, with Garamond as the fallback.
 - **Motion:** turned down automatically for visitors who have "reduce motion" set on their device.
 - **Phones:** on narrow screens the left nav rail becomes a bar along the bottom.
+
+## Acknowledgments
+"Sticky Notes" (https://skfb.ly/o6QtW) by Cxrly97 is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+"Cône" (https://skfb.ly/6SRqU) by fmercier is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
