@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Patricia Luc</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap">
+<link rel="stylesheet" href="css/styles.css">
+<script src="js/config.js" defer></script>
+<script src="js/utils.js" defer></script>
+<script src="js/nav.js" defer></script>
+<script src="js/landing.js" defer></script>
+<script src="js/experience.js" defer></script>
+<script src="js/portfolio.js" defer></script>
+<script src="js/future.js" defer></script>
+</head>
+<body>
+</head>
+<body>
+
+<nav class="rail" aria-label="Sections">
+  <a class="rail-icon" id="railIcon" href="https://matias.me/nsfw/" target="_blank" rel="noopener" aria-label="A little surprise">P</a>
+  <ul>
+    <li><a class="nav active" href="#me">Me</a></li>
+    <li><a class="nav" href="#about">About</a></li>
+    <li><a class="nav" href="#experience">Experience</a></li>
+    <li><a class="nav" href="#portfolio">Portfolio</a></li>
+    <li><a class="nav" href="#future">Future</a></li>
+  </ul>
+</nav>
+
+<main>
+  <!-- ========== Landing ========== -->
+  <section id="me">
+    <h1 class="hello"><span class="w">Hi!</span> <span class="w">I'm</span> <span class="w name">Patricia.</span></h1>
+    <div class="stage">
+      <button class="meet" id="meetBtn">Meet me</button>
+      <div class="intro" id="intro" aria-live="polite">
+        <button class="avatar" id="avatar" aria-label="Play my introduction again">
+          <!-- Placeholder avatar. Replaced by your 3D model when CONFIG.avatar is set. -->
+          <svg viewBox="0 0 200 200" aria-hidden="true">
+            <path d="M52 112c-6-44 16-72 48-72s54 28 48 72c-2 18-6 34-10 44H62c-4-10-8-26-10-44z" fill="#3a070d"/>
+            <ellipse cx="100" cy="104" rx="36" ry="42" fill="#f3c9a8"/>
+            <path d="M64 96c4-30 22-42 40-42 18 0 32 12 34 40-14-4-30-14-38-26-8 14-22 24-36 28z" fill="#3a070d"/>
+            <ellipse cx="86" cy="104" rx="3" ry="4" fill="#3a070d"/><ellipse cx="114" cy="104" rx="3" ry="4" fill="#3a070d"/>
+            <ellipse cx="78" cy="116" rx="6" ry="3" fill="#f0a489" opacity=".55"/><ellipse cx="122" cy="116" rx="6" ry="3" fill="#f0a489" opacity=".55"/>
+            <ellipse class="mouth" cx="100" cy="124" rx="6" ry="2" fill="#7a121c"/>
+            <path d="M70 146c8 10 18 14 30 14s22-4 30-14l8 30H62z" fill="#f8eee6"/>
+          </svg>
+        </button>
+        <span class="avatar-hint">tap me to hear it again</span>
+        <p class="caption" id="caption"></p>
+        <ul class="socials">
+          <li><a href="mailto:patricia.b.luc@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3.5 7l8.5 6 8.5-6"/></svg></a></li>
+          <li><a href="https://github.com/pbluc" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M9 19c-4 1.3-4-2-6-2.5m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1-.3-3.4 1.3a11.6 11.6 0 0 0-6 0C6.8 3.3 5.8 3.6 5.8 3.6a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4.4 10c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21.5"/></svg></a></li>
+          <li><a href="http://linkedin.com/in/patricia-luc/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7.5 10.5v6M7.5 7.5v.01M11.5 16.5v-6M11.5 13c0-1.7 1.2-2.6 2.5-2.6s2.5.8 2.5 2.6v3.5"/></svg></a></li>
+        </ul>
+        <span class="email-text">patricia.b.luc@gmail.com</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== About ========== -->
+  <section id="about">
+    <p class="eyebrow rise">About</p>
+    <div class="about-copy rise">
+      <p>I just recently left <em>Microsoft</em>, where I helped support architecture that improved storage costs and space for OneDrive and SharePoint.</p>
+      <p>Before that, I'd been with <em>Meta</em> working on XR related projects.</p>
+      <p>When I'm not in tech mode, I'm expressing my creative side through content-making.</p>
+      <p>I get excited by all things <em>mixed reality</em> and have been able to make and work on interesting things because of it.</p>
+    </div>
+  </section>
+
+  <!-- ========== Experience ========== -->
+  <section id="experience">
+    <p class="eyebrow rise">Experience</p>
+    <h2 class="rise">Where I've <em>worked</em></h2>
+    <div class="role-tabs rise" id="roleTabs" role="tablist" aria-label="Choose a role"></div>
+    <ol class="roles" id="roles">
+      <li class="role">
+        <header><span class="when">Aug 2024 – 2026</span><h3>Microsoft</h3><span class="title">Software Engineer</span><span class="where">Redmond, WA</span></header>
+        <ul>
+          <li>Engineered and maintained automated, large-scale Azure Blob Storage architecture for data ingestion, hosting, and content delivery at petabyte scale, supporting hundreds of thousands of enterprise customers.</li>
+          <li>Designed and shipped a recurring C# job that detects and alerts on orphaned identity authorization apps left behind by decommissioned hosting infrastructure, surfacing ~1K unused apps across 300 inactive environments.</li>
+          <li>Automated steps in the blob deployment pipeline, cutting manual deployment effort by up to 8x and letting the system meet its target of 100 deployment requests per month.</li>
+        </ul>
+      </li>
+      <li class="role">
+        <header><span class="when">Nov 2022 – May 2024</span><h3>Lamont-Doherty Earth Observatory</h3><span class="title">Lab Assistant</span><span class="where">New York, NY</span></header>
+        <ul>
+          <li>Authored a Jupyter Book of onboarding documentation and tutorial notebooks for the M²LInES research group, covering environment setup, data pipelines, and model training for subgrid parameterization research.</li>
+          <li>Wrote Python to run quasi-geostrophic ocean simulations with pyqg, coarse-grain them into low-resolution datasets, and train fully convolutional neural networks to predict subgrid parameterizations.</li>
+          <li>Set up and configured Veros, a Python-based primitive-equation ocean model, to run standalone ocean simulations.</li>
+        </ul>
+        <a class="repo" href="https://github.com/m2lines/MLwithQG" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.6 0 0 3.6 0 8c0 3.5 2.3 6.5 5.5 7.6.4.1.5-.2.5-.4v-1.4c-2.2.5-2.7-1-2.7-1-.4-.9-.9-1.2-.9-1.2-.7-.5.1-.5.1-.5.8.1 1.2.8 1.2.8.7 1.2 1.9.9 2.3.7.1-.5.3-.9.5-1.1-1.8-.2-3.6-.9-3.6-4 0-.9.3-1.6.8-2.1-.1-.2-.4-1 .1-2.1 0 0 .7-.2 2.2.8a7.5 7.5 0 0 1 4 0c1.5-1 2.2-.8 2.2-.8.4 1.1.2 1.9.1 2.1.5.6.8 1.3.8 2.1 0 3.1-1.9 3.7-3.6 3.9.3.3.5.8.5 1.5v2.2c0 .2.1.5.6.4A8 8 0 0 0 16 8c0-4.4-3.6-8-8-8z"/></svg>The Jupyter Book on GitHub</a>
+      </li>
+      <li class="role">
+        <header><span class="when">Summer 2023</span><h3>Microsoft</h3><span class="title">Software Engineer Intern</span><span class="where">Redmond, WA</span></header>
+        <ul>
+          <li>Implemented Dropbox's open-source lossless video recompression solution in C++ to evaluate whether it could reduce Azure Blob video storage by a projected 20%.</li>
+          <li>Tested it across a range of video codecs, uncovering quality loss and codec types it failed to compress further, which informed the team's decision on its viability.</li>
+        </ul>
+        <a class="repo" href="https://github.com/pbluc/avrecode-ms" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.6 0 0 3.6 0 8c0 3.5 2.3 6.5 5.5 7.6.4.1.5-.2.5-.4v-1.4c-2.2.5-2.7-1-2.7-1-.4-.9-.9-1.2-.9-1.2-.7-.5.1-.5.1-.5.8.1 1.2.8 1.2.8.7 1.2 1.9.9 2.3.7.1-.5.3-.9.5-1.1-1.8-.2-3.6-.9-3.6-4 0-.9.3-1.6.8-2.1-.1-.2-.4-1 .1-2.1 0 0 .7-.2 2.2.8a7.5 7.5 0 0 1 4 0c1.5-1 2.2-.8 2.2-.8.4 1.1.2 1.9.1 2.1.5.6.8 1.3.8 2.1 0 3.1-1.9 3.7-3.6 3.9.3.3.5.8.5 1.5v2.2c0 .2.1.5.6.4A8 8 0 0 0 16 8c0-4.4-3.6-8-8-8z"/></svg>Dropbox recompression on GitHub</a>
+      </li>
+      <li class="role">
+        <header><span class="when">Summer 2022</span><h3>Meta</h3><span class="title">Software Engineer Intern</span><span class="where">Seattle, WA</span></header>
+        <ul>
+          <li>Created a new voice command feature for Meta's Horizon Worlds AI voice assistant on Oculus, using the Meta Voice SDK and Wit.ai's NLU training service to interpret user intent.</li>
+          <li>Implemented accessible voice-command entry points in ReactVR, letting people spawn requested objects by voice for hands-free world-building.</li>
+        </ul>
+      </li>
+      <li class="role">
+        <header><span class="when">Summer 2021</span><h3>Facebook</h3><span class="title">FB University Intern</span><span class="where">Remote</span></header>
+        <ul>
+          <li>Ideated and programmed ARt Gal, a social, art-sharing AR Android app in Java, where people attach custom augmented effects to physical 2D artwork using ARCore and the Augmented Images API.</li>
+          <li>Integrated the Google Maps SDK so people can discover nearby artworks and view effects left by others, with content stored and served through Firebase.</li>
+        </ul>
+      </li>
+    </ol>
+    <div class="role-nav">
+      <button id="rolePrev" aria-label="Previous role"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <span class="role-count" id="roleCount">1 / 5</span>
+      <button id="roleNext" aria-label="Next role"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+  </section>
+
+  <!-- ========== Portfolio ========== -->
+  <section id="portfolio">
+    <p class="eyebrow rise">Portfolio</p>
+    <h2 class="rise">Things I've <em>made</em></h2>
+    <div class="carousel" id="carousel" tabindex="0" aria-roledescription="carousel" aria-label="Projects. Use the arrow keys to browse.">
+      <div class="ring" id="ring"></div>
+    </div>
+    <div class="car-ctrl">
+      <button class="arrow" id="prev" aria-label="Previous project"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <div class="dots" id="dots"></div>
+      <button class="arrow" id="next" aria-label="Next project"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+  </section>
+
+  <!-- ========== Future ========== -->
+  <section id="future">
+    <p class="eyebrow rise">What's next</p>
+    <h2 class="rise">On my <em>horizon</em></h2>
+    <div class="field" id="field"></div>
+    <p class="field-hint">Tap a phrase to hear about it.</p>
+  </section>
+</main>
+<footer>Patricia Luc · Seattle → Los Angeles · 2026</footer>
+
+<button class="roamer" id="roamer" aria-label="Meet me: go back to the top and play my introduction">Meet me</button>
+</body>
+</html>
