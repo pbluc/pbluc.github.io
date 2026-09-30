@@ -4,6 +4,8 @@ A one-page personal site: landing intro with a talking avatar, about, experience
 
 It is plain HTML, CSS and JavaScript split into small files. There is no build step and nothing to install.
 
+<img width="1900" height="901" alt="image" src="https://github.com/user-attachments/assets/4af94957-f338-4002-9873-9247248618b4" />
+
 ## Structure
 
 ```
