@@ -2,8 +2,14 @@
 const avatar = $("#avatar"), caption = $("#caption"), intro = $("#intro"), meetBtn = $("#meetBtn");
 let met = false, playToken = 0, audio = null;
 
-if (CONFIG.avatar.staticModel || CONFIG.avatar.animatedModel) {
-  avatar.innerHTML = modelEl(CONFIG.avatar.staticModel || CONFIG.avatar.animatedModel, 'id="avatarModel"');
+const hasAvatarModel = CONFIG.avatar.staticModel || CONFIG.avatar.animatedModel;
+if (hasAvatarModel) {
+  avatar.innerHTML = modelEl(hasAvatarModel, 'id="avatarModel"');
+} else {
+  // No model yet: hide the avatar and its hint. "Meet me" comes back after
+  // each introduction so visitors can replay it.
+  avatar.hidden = true;
+  document.querySelector(".avatar-hint").hidden = true;
 }
 function setTalking(on) {
   avatar.classList.toggle("talking", on);
@@ -27,7 +33,21 @@ function showCaption(text) {
 function finishIntro(token) {
   if (token !== playToken) return;
   setTalking(false);
-  setTimeout(() => { if (token === playToken) showCaption(""); }, 1800);
+  setTimeout(() => {
+    if (token !== playToken) return;
+    showCaption("");
+    if (!hasAvatarModel) showMeetButton();
+  }, 1800);
+}
+function hideMeetButton() {
+  meetBtn.classList.add("gone");
+  setTimeout(() => { if (meetBtn.classList.contains("gone")) meetBtn.hidden = true; }, 700);
+}
+function showMeetButton() {
+  // Without an avatar, the button returns in the avatar's place, above the captions
+  if (meetBtn.parentElement !== intro) intro.insertBefore(meetBtn, caption);
+  meetBtn.hidden = false;
+  meetBtn.classList.remove("gone");
 }
 function stopAll() {
   playToken++;
@@ -81,14 +101,13 @@ function timedCaptions(token) {
   step();
 }
 function meet() {
+  hideMeetButton();
   if (!met) {
     met = true;
-    meetBtn.classList.add("gone");
-    setTimeout(() => { meetBtn.hidden = true; }, 700);
     intro.classList.add("on");
     hideRoamer();
   }
-  setTimeout(playIntro, met ? 500 : 0);
+  setTimeout(playIntro, 500);
 }
 meetBtn.addEventListener("click", meet);
 avatar.addEventListener("click", playIntro);
