@@ -70,23 +70,6 @@ python3 -m http.server 8000
 
 Then open the address it prints (for example http://localhost:8000).
 
-## Publishing with GitHub Pages
-
-1. Create a public repo named `pbluc.github.io` (or any name).
-2. Upload everything in this folder to the repo root, or push it with git:
-   ```bash
-   git init
-   git add .
-   git commit -m "First version of my site"
-   git branch -M main
-   git remote add origin https://github.com/pbluc/pbluc.github.io.git
-   git push -u origin main
-   ```
-3. In the repo, go to **Settings → Pages**. Under "Build and deployment", set Source to **Deploy from a branch**, then choose **main** and **/ (root)**.
-4. After a minute or two the site is live at `https://pbluc.github.io`. With any other repo name it's at `https://pbluc.github.io/<repo-name>`.
-
-GitHub rejects files over 100 MB, and the web uploader allows up to 25 MB per file. Compress large `.glb` models first, for example with [gltf.report](https://gltf.report) or `npx @gltf-transform/cli optimize in.glb out.glb`.
-
 ## Design notes
 
 - **Colors:** deep red `#7a121c` background, warm off-white `#f8eee6`, apricot `#f6b58a` accent. They are defined as CSS variables at the top of `css/styles.css`.
