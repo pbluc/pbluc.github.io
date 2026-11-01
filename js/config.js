@@ -22,7 +22,7 @@ const CONFIG = {
     cone: "assets/cone.glb", segdimmer: "assets/segdimmer.glb", stickyar: "assets/stickyar.glb", artgal: "assets/artgal.glb"
   },
   futureAudio: {                      // e.g. "assets/interior.mp3"
-    "interior decorating": "assets/interior-decorating.m4a", "making content": "assets/making-content.m4a", "living in LA": "assets/los-angeles.m4a"
+    "interior decorating": "assets/interior-decorating.m4a", "making content": "assets/making-content.m4a"
   }
 };
 
