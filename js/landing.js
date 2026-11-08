@@ -5,6 +5,12 @@ let met = false, playToken = 0, audio = null;
 const hasAvatarModel = CONFIG.avatar.staticModel || CONFIG.avatar.animatedModel;
 if (hasAvatarModel) {
   avatar.innerHTML = modelEl(hasAvatarModel, 'id="avatarModel"');
+  // Keep the avatar facing forward: no auto-spin and no drag-to-rotate
+  // (the project models in the portfolio still spin).
+  const avatarModel = document.getElementById("avatarModel");
+  avatarModel.removeAttribute("auto-rotate");
+  avatarModel.removeAttribute("camera-controls");
+  //avatarModel.setAttribute("camera-orbit", "0deg 85deg auto");
 } else {
   // No model yet: hide the avatar and its hint. "Meet me" comes back after
   // each introduction so visitors can replay it.
@@ -21,7 +27,7 @@ function setTalking(on) {
     if (animationName) mv.setAttribute("animation-name", animationName);
     mv.setAttribute("autoplay", ""); mv.play && mv.play();
   } else if (!on) {
-    mv.pause && mv.pause();
+    mv.pause && mv.pause(); mv.currentTime = 0;   // rewind so the mouth is hidden at rest
     if (staticModel && mv.getAttribute("src") !== staticModel) mv.setAttribute("src", staticModel);
   }
 }

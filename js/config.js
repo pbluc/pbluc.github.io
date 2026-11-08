@@ -7,9 +7,9 @@
 const CONFIG = {
   navIcon: null,                      // e.g. "assets/nav-icon.png"
   avatar: {
-    staticModel: null,                // e.g. "assets/avatar-static.glb"
-    animatedModel: null,              // e.g. "assets/avatar-talking.glb"
-    animationName: null               // optional clip name inside the animated model
+    staticModel: "assets/avatar-talking.glb",
+    animatedModel: "assets/avatar-talking.glb",
+    animationName: "Talk"             // the phantom-mouth animation inside the model
   },
   introAudio: "assets/intro.m4a",                   // e.g. "assets/intro.mp3"
   // Caption timings in seconds. Adjust to match your recording.
