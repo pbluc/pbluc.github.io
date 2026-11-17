@@ -139,6 +139,9 @@ h2 em { color: var(--apricot); }
 .about-copy { max-width: 36ch; font-size: clamp(1.35rem, 2.4vw, 1.75rem); line-height: 1.55; margin: 0; }
 .about-copy p { margin: 0 0 1.3rem; }
 .about-copy em { color: var(--apricot); }
+.about-copy a { text-decoration: none; background: linear-gradient(var(--apricot), var(--apricot)) no-repeat 0 100% / 100% 1px; padding-bottom: 1px; transition: background-size .45s var(--ease); }
+.about-copy a:hover, .about-copy a:focus-visible { background-size: 100% 2px; }
+.about-copy a:hover em { color: var(--cream); }
 
 /* ---------- Experience ---------- */
 #experience { overflow-x: clip; }
